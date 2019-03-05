@@ -10,7 +10,7 @@ import (
 )
 
 import (
-	"github.com/orkusinc/migrate/v4/dktesting"
+	"github.com/enerj/migrate/v4/dktesting"
 )
 
 func ExampleParallelTest() {

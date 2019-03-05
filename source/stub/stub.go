@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/orkusinc/migrate/v4/source"
+	"github.com/enerj/migrate/v4/source"
 )
 
 func init() {

@@ -3,8 +3,8 @@ package godoc_vfs_test
 import (
 	"testing"
 
-	"github.com/orkusinc/migrate/v4/source/godoc_vfs"
-	st "github.com/orkusinc/migrate/v4/source/testing"
+	"github.com/enerj/migrate/v4/source/godoc_vfs"
+	st "github.com/enerj/migrate/v4/source/testing"
 	"golang.org/x/tools/godoc/vfs/mapfs"
 )
 

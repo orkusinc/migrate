@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/orkusinc/migrate/v4"
-	"github.com/orkusinc/migrate/v4/database"
+	"github.com/enerj/migrate/v4"
+	"github.com/enerj/migrate/v4/database"
 	"github.com/hashicorp/go-multierror"
 )
 

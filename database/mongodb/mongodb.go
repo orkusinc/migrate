@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"strconv"
 
-	"github.com/orkusinc/migrate/v4"
-	"github.com/orkusinc/migrate/v4/database"
+	"github.com/enerj/migrate/v4"
+	"github.com/enerj/migrate/v4/database"
 	"github.com/mongodb/mongo-go-driver/bson"
 	"github.com/mongodb/mongo-go-driver/mongo"
 	"github.com/mongodb/mongo-go-driver/x/network/connstring"

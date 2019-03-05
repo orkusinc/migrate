@@ -14,7 +14,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/orkusinc/migrate/v4/source"
+	"github.com/enerj/migrate/v4/source"
 	"golang.org/x/tools/godoc/vfs"
 )
 

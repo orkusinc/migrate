@@ -3,5 +3,5 @@
 package cli
 
 import (
-	_ "github.com/orkusinc/migrate/v4/source/google_cloud_storage"
+	_ "github.com/enerj/migrate/v4/source/google_cloud_storage"
 )

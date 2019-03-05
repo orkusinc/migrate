@@ -1,12 +1,12 @@
 package stub
 
 import (
-	"github.com/orkusinc/migrate/v4"
-	"github.com/orkusinc/migrate/v4/source"
-	"github.com/orkusinc/migrate/v4/source/stub"
+	"github.com/enerj/migrate/v4"
+	"github.com/enerj/migrate/v4/source"
+	"github.com/enerj/migrate/v4/source/stub"
 	"testing"
 
-	dt "github.com/orkusinc/migrate/v4/database/testing"
+	dt "github.com/enerj/migrate/v4/database/testing"
 )
 
 func Test(t *testing.T) {

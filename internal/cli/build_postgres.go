@@ -3,5 +3,5 @@
 package cli
 
 import (
-	_ "github.com/orkusinc/migrate/v4/database/postgres"
+	_ "github.com/enerj/migrate/v4/database/postgres"
 )

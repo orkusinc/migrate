@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/orkusinc/migrate/v4/database"
+	"github.com/enerj/migrate/v4/database"
 )
 
 // Test runs tests against database implementations.
