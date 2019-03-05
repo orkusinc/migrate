@@ -2,12 +2,12 @@ package spanner
 
 import (
 	"fmt"
-	"github.com/golang-migrate/migrate/v4"
+	"github.com/orkusinc/migrate/v4"
 	"os"
 	"testing"
 
-	dt "github.com/golang-migrate/migrate/v4/database/testing"
-	_ "github.com/golang-migrate/migrate/v4/source/file"
+	dt "github.com/orkusinc/migrate/v4/database/testing"
+	_ "github.com/orkusinc/migrate/v4/source/file"
 )
 
 func Test(t *testing.T) {

@@ -8,8 +8,8 @@ import (
 	nurl "net/url"
 	"strings"
 
-	"github.com/golang-migrate/migrate/v4"
-	"github.com/golang-migrate/migrate/v4/database"
+	"github.com/orkusinc/migrate/v4"
+	"github.com/orkusinc/migrate/v4/database"
 	"github.com/hashicorp/go-multierror"
 	_ "github.com/mattn/go-sqlite3"
 )
