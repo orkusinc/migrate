@@ -8,7 +8,7 @@ import (
 )
 
 import (
-	"github.com/enerj/migrate/v4"
+	"github.com/enerj/migrate"
 )
 
 // TestMigrate runs integration-tests between the Migrate layer and database implementations.

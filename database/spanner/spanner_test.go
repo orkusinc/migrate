@@ -2,12 +2,12 @@ package spanner
 
 import (
 	"fmt"
-	"github.com/enerj/migrate/v4"
+	"github.com/enerj/migrate"
 	"os"
 	"testing"
 
-	dt "github.com/enerj/migrate/v4/database/testing"
-	_ "github.com/enerj/migrate/v4/source/file"
+	dt "github.com/enerj/migrate/database/testing"
+	_ "github.com/enerj/migrate/source/file"
 )
 
 func Test(t *testing.T) {

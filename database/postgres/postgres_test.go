@@ -7,7 +7,7 @@ import (
 	"database/sql"
 	sqldriver "database/sql/driver"
 	"fmt"
-	"github.com/enerj/migrate/v4"
+	"github.com/enerj/migrate"
 	"io"
 	"strconv"
 	"strings"
@@ -16,9 +16,9 @@ import (
 
 	"github.com/dhui/dktest"
 
-	dt "github.com/enerj/migrate/v4/database/testing"
-	"github.com/enerj/migrate/v4/dktesting"
-	_ "github.com/enerj/migrate/v4/source/file"
+	dt "github.com/enerj/migrate/database/testing"
+	"github.com/enerj/migrate/dktesting"
+	_ "github.com/enerj/migrate/source/file"
 )
 
 var (

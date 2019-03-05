@@ -9,7 +9,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/enerj/migrate/v4/source"
+	"github.com/enerj/migrate/source"
 )
 
 func init() {

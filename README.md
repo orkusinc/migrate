@@ -103,9 +103,9 @@ __[Go Documentation](https://godoc.org/github.com/enerj/migrate)__
 
 ```go
 import (
-    "github.com/enerj/migrate/v4"
-    _ "github.com/enerj/migrate/v4/database/postgres"
-    _ "github.com/enerj/migrate/v4/source/github"
+    "github.com/enerj/migrate"
+    _ "github.com/enerj/migrate/database/postgres"
+    _ "github.com/enerj/migrate/source/github"
 )
 
 func main() {
@@ -122,9 +122,9 @@ Want to use an existing database client?
 import (
     "database/sql"
     _ "github.com/lib/pq"
-    "github.com/enerj/migrate/v4"
-    "github.com/enerj/migrate/v4/database/postgres"
-    _ "github.com/enerj/migrate/v4/source/file"
+    "github.com/enerj/migrate"
+    "github.com/enerj/migrate/database/postgres"
+    _ "github.com/enerj/migrate/source/file"
 )
 
 func main() {
@@ -152,8 +152,8 @@ Each migration has an up and down migration. [Why?](FAQ.md#why-two-separate-file
 
 Version | Go Modules | Min Go Version | Import | Notes
 --------|------------|----------------|--------|------
-**master** | :white_check_mark: | 1.10.3 | `import "github.com/enerj/migrate/v4"` | New features and bug fixes arrive here first |
-**v4** | :white_check_mark: | 1.10.3 | `import "github.com/enerj/migrate/v4"` | |
+**master** | :white_check_mark: | 1.10.3 | `import "github.com/enerj/migrate"` | New features and bug fixes arrive here first |
+**v4** | :white_check_mark: | 1.10.3 | `import "github.com/enerj/migrate"` | |
 **v3** | :x: | 1.10 | `import "github.com/enerj/migrate"` (with package manager) or `import "gopkg.in/golang-migrate/migrate.v3"` (not recommended) | Only security fixes are backported. Only use if your project is not using Go modules. |
 
 ## Development and Contributing

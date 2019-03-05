@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/enerj/migrate/v4/database"
-	"github.com/enerj/migrate/v4/source"
+	"github.com/enerj/migrate/database"
+	"github.com/enerj/migrate/source"
 )
 
 // DefaultPrefetchMigrations sets the number of migrations to pre-read

@@ -9,9 +9,9 @@ import (
 	"testing"
 
 	_ "github.com/cznic/ql/driver"
-	"github.com/enerj/migrate/v4"
-	dt "github.com/enerj/migrate/v4/database/testing"
-	_ "github.com/enerj/migrate/v4/source/file"
+	"github.com/enerj/migrate"
+	dt "github.com/enerj/migrate/database/testing"
+	_ "github.com/enerj/migrate/source/file"
 )
 
 func Test(t *testing.T) {

@@ -11,8 +11,8 @@ import (
 	nurl "net/url"
 
 	_ "github.com/cznic/ql/driver"
-	"github.com/enerj/migrate/v4"
-	"github.com/enerj/migrate/v4/database"
+	"github.com/enerj/migrate"
+	"github.com/enerj/migrate/database"
 )
 
 func init() {

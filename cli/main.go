@@ -1,6 +1,6 @@
 package main
 
-import "github.com/enerj/migrate/v4/internal/cli"
+import "github.com/enerj/migrate/cli"
 
 // Deprecated, please use cmd/migrate
 func main() {

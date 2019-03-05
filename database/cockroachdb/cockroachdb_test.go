@@ -6,7 +6,7 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"github.com/enerj/migrate/v4"
+	"github.com/enerj/migrate"
 	"strings"
 	"testing"
 )
@@ -17,9 +17,9 @@ import (
 )
 
 import (
-	dt "github.com/enerj/migrate/v4/database/testing"
-	"github.com/enerj/migrate/v4/dktesting"
-	_ "github.com/enerj/migrate/v4/source/file"
+	dt "github.com/enerj/migrate/database/testing"
+	"github.com/enerj/migrate/dktesting"
+	_ "github.com/enerj/migrate/source/file"
 )
 
 const defaultPort = 26257

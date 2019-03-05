@@ -1,4 +1,4 @@
-module github.com/enerj/migrate/v4
+module github.com/enerj/migrate
 
 require (
 	cloud.google.com/go v0.34.0

@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/enerj/migrate/v4/database"
+	"github.com/enerj/migrate/database"
 )
 
 // Test runs tests against database implementations.
