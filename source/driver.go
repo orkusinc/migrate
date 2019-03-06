@@ -47,6 +47,11 @@ type Driver interface {
 	// If there is no version available, it must return os.ErrNotExist.
 	First() (version uint, err error)
 
+	// Last returns the latest migration version available to the driver.
+	// Migrate will call this function to init new DB to suppress up migrations.
+	// If there is no version available, it must return os.ErrNotExist.
+	Last() (version uint, err error)
+
 	// Prev returns the previous version for a given version available to the driver.
 	// Migrate will call this function multiple times.
 	// If there is no previous version available, it must return os.ErrNotExist.

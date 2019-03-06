@@ -31,6 +31,7 @@ var (
 	ErrInvalidVersion = errors.New("version must be >= -1")
 	ErrLocked         = errors.New("database locked")
 	ErrLockTimeout    = errors.New("timeout: can't acquire database lock")
+	ErrAlreadyInited  = errors.New("database already inited")
 )
 
 // ErrShortLimit is an error returned when not enough migrations
@@ -386,6 +387,33 @@ func (m *Migrate) Version() (version uint, dirty bool, err error) {
 	}
 
 	return suint(v), d, nil
+}
+
+// InitNewDB sets latest version to newly created DB
+// If DB version not nil, it will return ErrAlreadyInited.
+func (m *Migrate) InitNewDB() (err error) {
+	v, _, err := m.databaseDrv.Version()
+	if err != nil {
+		return err
+	}
+
+	// if have nil version then it is new DB
+	// and need set top migration version
+	// otherwise return ErrAlreadyInited
+	if v == database.NilVersion {
+		v, err := m.sourceDrv.Last()
+		if err != nil {
+			return err
+		}
+		err = m.databaseDrv.SetVersion(int(v), false)
+		if err != nil {
+			return err
+		}
+	} else {
+		return ErrAlreadyInited
+	}
+
+	return nil
 }
 
 // read reads either up or down migrations from source `from` to `to`.

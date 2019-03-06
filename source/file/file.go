@@ -91,6 +91,14 @@ func (f *File) First() (version uint, err error) {
 	}
 }
 
+func (f *File) Last() (version uint, err error) {
+	if v, ok := f.migrations.Last(); !ok {
+		return 0, &os.PathError{Op: "last", Path: f.path, Err: os.ErrNotExist}
+	} else {
+		return v, nil
+	}
+}
+
 func (f *File) Prev(version uint) (prevVersion uint, err error) {
 	if v, ok := f.migrations.Prev(version); !ok {
 		return 0, &os.PathError{Op: fmt.Sprintf("prev for version %v", version), Path: f.path, Err: os.ErrNotExist}
