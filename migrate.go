@@ -26,12 +26,12 @@ var DefaultPrefetchMigrations = uint(10)
 var DefaultLockTimeout = 15 * time.Second
 
 var (
-	ErrNoChange       = errors.New("no change")
-	ErrNilVersion     = errors.New("no migration")
-	ErrInvalidVersion = errors.New("version must be >= -1")
-	ErrLocked         = errors.New("database locked")
-	ErrLockTimeout    = errors.New("timeout: can't acquire database lock")
-	ErrAlreadyInited  = errors.New("database already inited")
+	ErrNoChange           = errors.New("no change")
+	ErrNilVersion         = errors.New("no migration")
+	ErrInvalidVersion     = errors.New("version must be >= -1")
+	ErrLocked             = errors.New("database locked")
+	ErrLockTimeout        = errors.New("timeout: can't acquire database lock")
+	ErrAlreadyInitialized = errors.New("database already initialized")
 )
 
 // ErrShortLimit is an error returned when not enough migrations
@@ -389,9 +389,9 @@ func (m *Migrate) Version() (version uint, dirty bool, err error) {
 	return suint(v), d, nil
 }
 
-// InitMigration sets latest version to newly integrated DB
+// InitializeMigration sets latest version to newly integrated DB
 // If DB version not nil, it will return ErrAlreadyInited.
-func (m *Migrate) InitMigration() (err error) {
+func (m *Migrate) InitializeMigration() (err error) {
 	v, _, err := m.databaseDrv.Version()
 	if err != nil {
 		return err
@@ -410,7 +410,7 @@ func (m *Migrate) InitMigration() (err error) {
 			return err
 		}
 	} else {
-		return ErrAlreadyInited
+		return ErrAlreadyInitialized
 	}
 
 	return nil
