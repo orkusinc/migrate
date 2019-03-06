@@ -389,9 +389,9 @@ func (m *Migrate) Version() (version uint, dirty bool, err error) {
 	return suint(v), d, nil
 }
 
-// InitNewDB sets latest version to newly created DB
+// InitMigration sets latest version to newly integrated DB
 // If DB version not nil, it will return ErrAlreadyInited.
-func (m *Migrate) InitNewDB() (err error) {
+func (m *Migrate) InitMigration() (err error) {
 	v, _, err := m.databaseDrv.Version()
 	if err != nil {
 		return err
