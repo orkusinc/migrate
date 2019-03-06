@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/enerj/migrate/source"
+	"github.com/orkusinc/migrate/source"
 )
 
 // Test runs tests against source implementations.

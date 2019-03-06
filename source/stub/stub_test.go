@@ -3,8 +3,8 @@ package stub
 import (
 	"testing"
 
-	"github.com/enerj/migrate/source"
-	st "github.com/enerj/migrate/source/testing"
+	"github.com/orkusinc/migrate/source"
+	st "github.com/orkusinc/migrate/source/testing"
 )
 
 func Test(t *testing.T) {

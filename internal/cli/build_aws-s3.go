@@ -3,5 +3,5 @@
 package cli
 
 import (
-	_ "github.com/enerj/migrate/source/aws_s3"
+	_ "github.com/orkusinc/migrate/source/aws_s3"
 )

@@ -4,10 +4,10 @@
 
 #### Download pre-build binary (Windows, MacOS, or Linux)
 
-[Release Downloads](https://github.com/enerj/migrate/releases)
+[Release Downloads](https://github.com/orkusinc/migrate/releases)
 
 ```
-$ curl -L https://github.com/enerj/migrate/releases/download/$version/migrate.$platform-amd64.tar.gz | tar xvz
+$ curl -L https://github.com/orkusinc/migrate/releases/download/$version/migrate.$platform-amd64.tar.gz | tar xvz
 ```
 
 #### MacOS
@@ -29,16 +29,16 @@ $ apt-get install -y migrate
 
 ##### Unversioned
 ```
-$ go get -tags 'postgres' -u github.com/enerj/migrate/cmd/migrate
+$ go get -tags 'postgres' -u github.com/orkusinc/migrate/cmd/migrate
 ```
 
 ##### Versioned
 
 ```
-$ go get -u -d github.com/enerj/migrate/cmd/migrate
-$ cd $GOPATH/src/github.com/enerj/migrate/cmd/migrate
+$ go get -u -d github.com/orkusinc/migrate/cmd/migrate
+$ cd $GOPATH/src/github.com/orkusinc/migrate/cmd/migrate
 $ git checkout $TAG  # e.g. v4.1.0
-$ go build -tags 'postgres' -ldflags="-X main.Version=$(git describe --tags)" -o $GOPATH/bin/migrate github.com/enerj/migrate/cmd/migrate
+$ go build -tags 'postgres' -ldflags="-X main.Version=$(git describe --tags)" -o $GOPATH/bin/migrate github.com/orkusinc/migrate/cmd/migrate
 ```
 
 ##### Notes:
@@ -49,7 +49,7 @@ with the appropriate database tag(s) for the databases desired.  The tags
 correspond to the names of the sub-packages underneath the
 [`database`](../database) package.
 1. Similarly to the database build tags, if you need to support other sources, use the appropriate build tag(s).
-1. Support for build constraints will be removed in the future: https://github.com/enerj/migrate/issues/60
+1. Support for build constraints will be removed in the future: https://github.com/orkusinc/migrate/issues/60
 
 
 ## Usage

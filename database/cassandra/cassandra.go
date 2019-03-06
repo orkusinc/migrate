@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gocql/gocql"
-	"github.com/enerj/migrate/database"
+	"github.com/orkusinc/migrate/database"
 	"github.com/hashicorp/go-multierror"
 )
 

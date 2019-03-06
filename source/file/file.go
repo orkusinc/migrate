@@ -9,7 +9,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/enerj/migrate/source"
+	"github.com/orkusinc/migrate/source"
 )
 
 func init() {

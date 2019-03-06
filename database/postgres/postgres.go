@@ -12,8 +12,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/enerj/migrate"
-	"github.com/enerj/migrate/database"
+	"github.com/orkusinc/migrate"
+	"github.com/orkusinc/migrate/database"
 	multierror "github.com/hashicorp/go-multierror"
 	"github.com/lib/pq"
 )

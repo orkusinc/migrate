@@ -3,8 +3,8 @@ package bindata
 import (
 	"testing"
 
-	"github.com/enerj/migrate/source/go_bindata/testdata"
-	st "github.com/enerj/migrate/source/testing"
+	"github.com/orkusinc/migrate/source/go_bindata/testdata"
+	st "github.com/orkusinc/migrate/source/testing"
 )
 
 func Test(t *testing.T) {

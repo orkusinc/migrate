@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/enerj/migrate/database"
-	"github.com/enerj/migrate/source"
+	"github.com/orkusinc/migrate/database"
+	"github.com/orkusinc/migrate/source"
 )
 
 // DefaultPrefetchMigrations sets the number of migrations to pre-read

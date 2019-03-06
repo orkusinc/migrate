@@ -27,9 +27,9 @@ import (
     "database/sql"
     
     _ "github.com/go-sql-driver/mysql"
-    "github.com/enerj/migrate"
-    "github.com/enerj/migrate/database/mysql"
-    _ "github.com/enerj/migrate/source/file"
+    "github.com/orkusinc/migrate"
+    "github.com/orkusinc/migrate/database/mysql"
+    _ "github.com/orkusinc/migrate/source/file"
 )
 
 func main() {

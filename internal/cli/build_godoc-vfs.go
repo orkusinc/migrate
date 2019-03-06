@@ -3,5 +3,5 @@
 package cli
 
 import (
-	_ "github.com/enerj/migrate/source/godoc_vfs"
+	_ "github.com/orkusinc/migrate/source/godoc_vfs"
 )

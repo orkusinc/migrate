@@ -12,7 +12,7 @@ import (
 )
 
 import (
-	"github.com/enerj/migrate/source"
+	"github.com/orkusinc/migrate/source"
 	"github.com/google/go-github/github"
 )
 

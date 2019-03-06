@@ -21,8 +21,8 @@ import (
 )
 
 import (
-	"github.com/enerj/migrate"
-	"github.com/enerj/migrate/database"
+	"github.com/orkusinc/migrate"
+	"github.com/orkusinc/migrate/database"
 )
 
 func init() {

@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	sqldriver "database/sql/driver"
 	"fmt"
-	"github.com/enerj/migrate"
+	"github.com/orkusinc/migrate"
 	"net/url"
 	"testing"
 )
@@ -16,9 +16,9 @@ import (
 )
 
 import (
-	dt "github.com/enerj/migrate/database/testing"
-	"github.com/enerj/migrate/dktesting"
-	_ "github.com/enerj/migrate/source/file"
+	dt "github.com/orkusinc/migrate/database/testing"
+	"github.com/orkusinc/migrate/dktesting"
+	_ "github.com/orkusinc/migrate/source/file"
 )
 
 const defaultPort = 3306

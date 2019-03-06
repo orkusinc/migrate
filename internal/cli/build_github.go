@@ -3,5 +3,5 @@
 package cli
 
 import (
-	_ "github.com/enerj/migrate/source/github"
+	_ "github.com/orkusinc/migrate/source/github"
 )

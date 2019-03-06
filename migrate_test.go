@@ -11,9 +11,9 @@ import (
 )
 
 import (
-	dStub "github.com/enerj/migrate/database/stub"
-	"github.com/enerj/migrate/source"
-	sStub "github.com/enerj/migrate/source/stub"
+	dStub "github.com/orkusinc/migrate/database/stub"
+	"github.com/orkusinc/migrate/source"
+	sStub "github.com/orkusinc/migrate/source/stub"
 )
 
 // sourceStubMigrations hold the following migrations:
@@ -107,7 +107,7 @@ func ExampleNewWithDatabaseInstance() {
 
 	// Create driver instance from db.
 	// Check each driver if it supports the WithInstance function.
-	// `import "github.com/enerj/migrate/database/postgres"`
+	// `import "github.com/orkusinc/migrate/database/postgres"`
 	instance, err := dStub.WithInstance(db, &dStub.Config{})
 	if err != nil {
 		log.Fatal(err)
@@ -157,7 +157,7 @@ func ExampleNewWithSourceInstance() {
 
 	// Create driver instance from DummyInstance di.
 	// Check each driver if it support the WithInstance function.
-	// `import "github.com/enerj/migrate/source/stub"`
+	// `import "github.com/orkusinc/migrate/source/stub"`
 	instance, err := sStub.WithInstance(di, &sStub.Config{})
 	if err != nil {
 		log.Fatal(err)

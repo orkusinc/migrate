@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"reflect"
 
-	"github.com/enerj/migrate/database"
+	"github.com/orkusinc/migrate/database"
 )
 
 func init() {

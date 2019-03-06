@@ -13,9 +13,9 @@ cd examples/migrations && go-bindata -pkg migrations .
 
 ```go
 import (
-  "github.com/enerj/migrate"
-  "github.com/enerj/migrate/source/go_bindata"
-  "github.com/enerj/migrate/source/go_bindata/examples/migrations"
+  "github.com/orkusinc/migrate"
+  "github.com/orkusinc/migrate/source/go_bindata"
+  "github.com/orkusinc/migrate/source/go_bindata/examples/migrations"
 )
 
 func main() {

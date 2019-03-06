@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/enerj/migrate"
-	"github.com/enerj/migrate/database"
-	"github.com/enerj/migrate/source"
+	"github.com/orkusinc/migrate"
+	"github.com/orkusinc/migrate/database"
+	"github.com/orkusinc/migrate/source"
 )
 
 const defaultTimeFormat = "20060102150405"

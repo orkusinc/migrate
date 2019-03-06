@@ -3,5 +3,5 @@
 package cli
 
 import (
-	_ "github.com/enerj/migrate/database/spanner"
+	_ "github.com/orkusinc/migrate/database/spanner"
 )

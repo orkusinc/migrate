@@ -3,5 +3,5 @@
 package cli
 
 import (
-	_ "github.com/enerj/migrate/database/sqlite3"
+	_ "github.com/orkusinc/migrate/database/sqlite3"
 )

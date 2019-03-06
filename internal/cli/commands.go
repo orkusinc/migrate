@@ -3,9 +3,9 @@ package cli
 import (
 	"errors"
 	"fmt"
-	"github.com/enerj/migrate"
-	_ "github.com/enerj/migrate/database/stub" // TODO remove again
-	_ "github.com/enerj/migrate/source/file"
+	"github.com/orkusinc/migrate"
+	_ "github.com/orkusinc/migrate/database/stub" // TODO remove again
+	_ "github.com/orkusinc/migrate/source/file"
 	"os"
 	"path/filepath"
 	"strconv"

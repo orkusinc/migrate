@@ -1,4 +1,4 @@
-module github.com/enerj/migrate
+module github.com/orkusinc/migrate
 
 require (
 	cloud.google.com/go v0.34.0

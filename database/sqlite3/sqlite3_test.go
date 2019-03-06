@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/enerj/migrate"
-	dt "github.com/enerj/migrate/database/testing"
-	_ "github.com/enerj/migrate/source/file"
+	"github.com/orkusinc/migrate"
+	dt "github.com/orkusinc/migrate/database/testing"
+	_ "github.com/orkusinc/migrate/source/file"
 	_ "github.com/mattn/go-sqlite3"
 )
 
