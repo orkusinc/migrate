@@ -9,7 +9,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/golang-migrate/migrate/v4/source"
+	"github.com/orkusinc/migrate/source"
 )
 
 func init() {
@@ -86,6 +86,14 @@ func (f *File) Close() error {
 func (f *File) First() (version uint, err error) {
 	if v, ok := f.migrations.First(); !ok {
 		return 0, &os.PathError{Op: "first", Path: f.path, Err: os.ErrNotExist}
+	} else {
+		return v, nil
+	}
+}
+
+func (f *File) Last() (version uint, err error) {
+	if v, ok := f.migrations.Last(); !ok {
+		return 0, &os.PathError{Op: "last", Path: f.path, Err: os.ErrNotExist}
 	} else {
 		return v, nil
 	}

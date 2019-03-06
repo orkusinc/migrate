@@ -1,4 +1,4 @@
-module github.com/golang-migrate/migrate/v4
+module github.com/orkusinc/migrate
 
 require (
 	cloud.google.com/go v0.34.0

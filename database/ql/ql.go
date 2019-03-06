@@ -11,8 +11,8 @@ import (
 	nurl "net/url"
 
 	_ "github.com/cznic/ql/driver"
-	"github.com/golang-migrate/migrate/v4"
-	"github.com/golang-migrate/migrate/v4/database"
+	"github.com/orkusinc/migrate"
+	"github.com/orkusinc/migrate/database"
 )
 
 func init() {

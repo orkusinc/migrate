@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/golang-migrate/migrate/v4/database"
-	"github.com/golang-migrate/migrate/v4/source"
+	"github.com/orkusinc/migrate/database"
+	"github.com/orkusinc/migrate/source"
 )
 
 // DefaultPrefetchMigrations sets the number of migrations to pre-read
@@ -26,11 +26,12 @@ var DefaultPrefetchMigrations = uint(10)
 var DefaultLockTimeout = 15 * time.Second
 
 var (
-	ErrNoChange       = errors.New("no change")
-	ErrNilVersion     = errors.New("no migration")
-	ErrInvalidVersion = errors.New("version must be >= -1")
-	ErrLocked         = errors.New("database locked")
-	ErrLockTimeout    = errors.New("timeout: can't acquire database lock")
+	ErrNoChange           = errors.New("no change")
+	ErrNilVersion         = errors.New("no migration")
+	ErrInvalidVersion     = errors.New("version must be >= -1")
+	ErrLocked             = errors.New("database locked")
+	ErrLockTimeout        = errors.New("timeout: can't acquire database lock")
+	ErrAlreadyInitialized = errors.New("database already initialized")
 )
 
 // ErrShortLimit is an error returned when not enough migrations
@@ -386,6 +387,33 @@ func (m *Migrate) Version() (version uint, dirty bool, err error) {
 	}
 
 	return suint(v), d, nil
+}
+
+// InitializeMigration sets latest version to newly integrated DB
+// If DB version not nil, it will return ErrAlreadyInited.
+func (m *Migrate) InitializeMigration() (err error) {
+	v, _, err := m.databaseDrv.Version()
+	if err != nil {
+		return err
+	}
+
+	// if have nil version then it is new DB
+	// and need set top migration version
+	// otherwise return ErrAlreadyInited
+	if v == database.NilVersion {
+		v, err := m.sourceDrv.Last()
+		if err != nil {
+			return err
+		}
+		err = m.databaseDrv.SetVersion(int(v), false)
+		if err != nil {
+			return err
+		}
+	} else {
+		return ErrAlreadyInitialized
+	}
+
+	return nil
 }
 
 // read reads either up or down migrations from source `from` to `to`.
